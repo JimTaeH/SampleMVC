@@ -1,0 +1,64 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background: linear-gradient(to right, #c04848, #480048);
+}
+
+.footer-text {
+    color: #FFFFFF;
+}
+
+/* Start Text Decoration */
+
+.heading-color {
+    color: #eeeeee;
+}
+
+/* End Text Decoration */
+
+/* Start Image Control */
+
+.image-size {
+    width: 50%;
+    height: 50%;
+}
+
+/* End Image Control */
+
+/*Start card decoration*/
+
+.card-decor {
+    box-shadow: 5px 10px;
+}
+
+/*End main card*/
+
+/* Start custom btn */
+
+.button-color {
+    background-color: #143F6B;
+    border-color: #FEB139;
+    color: #FFFFFF;
+}
+
+.button-color:hover {
+    background-color: #FEB139;
+    border-color: #FEB139;
+    color: #FFFFFF;
+}
+
+/* End custom button */

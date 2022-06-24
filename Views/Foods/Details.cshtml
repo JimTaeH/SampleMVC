@@ -1,0 +1,38 @@
+﻿@model FoodApp.Models.Food
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-center heading-color">Details</h1>
+
+<div class="row bg-light bg-gradient">
+    <div class="col">
+        <img src="@Html.DisplayFor(model => model.FoodImg)" class="img-fluid">
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col">
+                ชื่อเมนู <br/> @Html.DisplayFor(model => model.FoodName) 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                ส่วนผสม <br/> @Html.DisplayFor(model => model.FoodDesc) 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row bg-light bg-gradient">
+    <div class="col">
+        ราคา <br/> @Html.DisplayFor(model => model.FoodCost)
+    </div>
+    <div class="col">
+        แคลอรี่ <br/> @Html.DisplayFor(model => model.FoodCal)
+    </div>
+</div>
+
+<div>
+    <a href="/Foods/RandomFood/"> สุ่มอีกครั้ง </a>
+</div>

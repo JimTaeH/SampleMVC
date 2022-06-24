@@ -1,0 +1,36 @@
+﻿@{
+	ViewData["Title"] = "BMR Calculator";
+}
+
+<h1 class="text-center"> คำนวณค่า BMR </h1>
+
+<div class="row">
+    <div class="d-flex justify-content-center">
+		<div class="col-5">
+		    <form asp-action="BMRCalculated">
+                <div class="mb-3">
+                    <select class="form-select" name="gender" id="userGender">
+                      <option selected> ระบุเพศของคุณ </option>
+                      <option value="Male"> ผู้ชาย </option>
+                      <option value="Female"> ผู้หญิง </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="userWeight" class="form-label">น้ำหนัก (kg)</label>
+                    <input type="number" name="weight" id="userWeight" class="form-control" aria-describedby="weightHelp" />
+                    <div id="weightHelp" class="form-text"> กรอกน้ำหนักของคุณในหน่วยกิโลกรัม </div>
+                </div>
+                <div class="mb-3">
+                    <label for="userHeight" class="form-label">ส่วนสูง (cm)</label>
+                    <input type="number" name="height" id="userHeight" class="form-control" aria-describedby="heightHelp" />
+                    <div id="heightHelp" class="form-text"> กรอกส่วนสูงของคุณในหน่วยเซนติเมตร </div>
+                </div>
+                <div class="mb-3">
+                    <label for="userAge" class="form-label"> อายุ </label>
+                    <input type="number" name="age" id="userAge" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-default btn-lg button-color"> คำนวณ </button>
+            </form>
+        </div>
+    </div>
+</div>

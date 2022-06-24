@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FoodApp.Models.Food>
+
+@{
+	ViewData["Title"] = "Your BMR";
+}
+
+<h1 class="text-center heading-color"> ค่า BMR ของคุณคือ </h1>
+
+<h2 class="text-center heading-color mt-5"> @ViewBag.Result </h2>
+<h3 class="text-center heading-color"> 
+    น้ำหนัก: @ViewBag.Weight kg ส่วนสูง: @ViewBag.Height cm <br />
+    เพศ: @ViewBag.Age อายุ: @ViewBag.Gender 
+</h3>
+
+<h1 class="text-center heading-color mt-5"> Recommended Food </h1>
+
+<div class="row mt-2">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-sm mt-2">
+            <div class="d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="@Html.DisplayFor(model => item.FoodImg)" class="card-img-top" style="height: 200px; width: auto;">
+                    <div class="card-body">
+                    <h5 class="card-title"> @Html.DisplayFor(modelItem => item.FoodName) </h5>
+                    <p class="card-text"> 
+                        @Html.DisplayFor(modelItem => item.FoodDesc) <br /> 
+                        @Html.DisplayFor(modelItem => item.FoodCost) บาท <br />
+                        @Html.DisplayFor(modelItem => item.FoodCal) kcal
+                    </p>
+                    </div>
+                </div> 
+            </div>  
+        </div>
+    }
+
+</div>

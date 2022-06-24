@@ -1,0 +1,28 @@
+﻿@model IEnumerable<FoodApp.Models.Food>
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h1 class="text-center heading-color"> Your Food is!! </h1>
+
+<div class="row mt-2">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-sm mt-2">
+            <div class="d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="@Html.DisplayFor(model => item.FoodImg)" class="card-img-top" style="height: 200px; width: auto;">
+                    <div class="card-body">
+                    <h5 class="card-title"> @Html.DisplayFor(modelItem => item.FoodName) </h5>
+                    <p class="card-text"> @Html.DisplayFor(modelItem => item.FoodDesc) <br /> @Html.DisplayFor(modelItem => item.FoodCost) </p>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary"> Food Details </a>
+                    <a href="/Foods/RandomFood/" class="btn btn-primary"> Random Again </a>
+                    </div>
+                </div> 
+            </div>  
+        </div>
+    }
+
+</div>

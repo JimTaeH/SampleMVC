@@ -1,0 +1,18 @@
+﻿@model IEnumerable<FoodApp.Models.Food>
+
+@{
+    ViewData["Title"] = "Random";
+}
+
+<div class="row">
+    <div class="d-flex justify-content-center">
+        <div class="card text-center">            
+            <div class="card-body">
+                <h5 class="card-title"> <strong>What to eat today?</strong> </h5>
+                <form asp-action="RandomResult">
+                    <button type="submit" name="randomPhrase" class="btn btn-default btn-lg button-color" value=@ViewBag.RandomValue> Random </button>
+                </form>
+            </div>           
+        </div>
+    </div>
+</div>
